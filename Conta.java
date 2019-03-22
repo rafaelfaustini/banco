@@ -1,10 +1,28 @@
 package banco;
 
 public class Conta {
-	private String nomeTitular;
 	private int numero;
 	private int agencia;
-	private float saldo;
+	private float saldo = 0;
+	private Cliente titular;
+	
+	private void setNumero(int numero) {
+		this.numero = numero;
+	}
+	
+	private void setAgencia(int agencia) {
+		this.agencia = agencia;
+	}
+	
+	private void setTitular(Cliente titular) {
+		this.titular = titular;
+	}
+	
+	public Conta(int numero,int agencia,Cliente titular){ // Construtor, inicialização
+		this.setNumero(numero);
+		this.setAgencia(agencia);
+		this.setTitular(titular);
+	}
 	
 	public float getSaldo() {
 		return this.saldo;
